@@ -2,7 +2,7 @@
 
 This document contains the instructions for using and developing Edge.
 
-The full Edge documentation is [part of our Device Management documentation site](https://cloud.mbed.com/docs/latest/connecting/device-management-edge.html), where you can also find the [API documentation](https://cloud.mbed.com/docs/current/mbed-edge-api/index.html). For comments or questions about the documentation, please [email us](mailto:support@mbed.org).
+The full Edge documentation is [part of our Device Management documentation site](https://developer.pelion.com/docs/device-management-edge/latest/introduction/index.html), where you can also find the [API documentation](https://developer.pelion.com/docs/device-management-edge/latest/edge-api-references/index.html). For comments or questions about the documentation, please [contact us](https://pelion.com/contact/).
 
 ## License
 
@@ -47,24 +47,26 @@ sudo apt install build-essential clang cmake curl doxygen gcc git graphviz libc6
 
 ### 2. Initialize repositories
 
-Fetch the Git submodules that are direct dependencies for Edge.
+Fetch the Git submodules that are direct dependencies for Edge:
+
 ```
 $ git submodule update --init --recursive
 ```
 
 ### 3. Install Rust
-    This is required only when building with Parsec.
 
-    ```
-    curl https://sh.rustup.rs -sSf | bash -s -- -y
+   This is required only when building with Parsec:
 
-    # configure the PATH environment variable
-    export PATH=$PATH:~/.cargo/bin
+   ```
+   curl https://sh.rustup.rs -sSf | bash -s -- -y
 
-    # To verify, run
-    rustc --version
-    cargo version
-    ```
+   # configure the PATH environment variable
+   export PATH=$PATH:~/.cargo/bin
+
+   # To verify, run
+   rustc --version
+   cargo version
+   ```
 
 ## Configuring Edge build
 
